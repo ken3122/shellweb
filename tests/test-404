@@ -9,7 +9,7 @@ else
 fi
 
 port=13245
-shellweb_cmd="$HOME/shellweb -p $port"
+shellweb_cmd="./shellweb -p $port"
 trap 'pkill -u $(id -u) -f "$shellweb_cmd"; pkill -u $(id -u) -f nc' EXIT
 $shellweb_cmd -p 13245 &
 sleep 0.1 
