@@ -1,5 +1,4 @@
 #!/bin/ksh
-#check for equality
 set -e 
 failed=0
 
@@ -36,11 +35,9 @@ fail() {
 }
 
 finish() {
-	#echo finish TRAP
-	#echo $failed
 	kill_shellweb || true
 	cleanup || true
-	test $failed -gt 0 || echo $0 OK 
+	test $failed -gt 0 || echo "$test_name ==> OK" 
 }
 
 trap 'finish' EXIT
