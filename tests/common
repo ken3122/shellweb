@@ -6,11 +6,7 @@ workdir="$PWD"
 tmpdir=$(mktemp -d -p $workdir)
 
 port=13245
-<<<<<<< HEAD
-www=$(mktemp -d -p $tmpdir)
-=======
 www=$(mkdir -d -p $tmpdir)
->>>>>>> upstream/master
 shellweb_cmd="${workdir}/shellweb -d $www -p $port"
 
 test_name=${0##*/test-}
